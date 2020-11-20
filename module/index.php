@@ -8,7 +8,9 @@
 				<button class="btn btn-primary">
 					<a href="read.php" target="_blank">Read</a>
 				</button>
-				<button class="btn btn-dark">Edit</button>
+				<button class="btn btn-dark">
+					<a href="update.php" target="_blank">Update</a>
+				</button>
 				<button class="btn btn-danger">Delete</button>
 			</div>
 		</div>

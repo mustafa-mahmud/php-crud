@@ -35,3 +35,21 @@ function read() {
     echo $sql . "<br/>" . $e->getMessage();
   }
 }
+
+//update data to DB
+function update($id, $name, $age, $password) {
+  try {
+    global $conn;
+
+    //Run Query
+    $sql = $conn->prepare("UPDATE users SET name='$name', age='$age', password='$password' WHERE id='$id'");
+    $sql->execute();
+
+    //msg to success updated
+    if ($sql->rowCount()) {
+      echo $sql->rowCount() . ' row update successfully';
+    }
+  } catch (PDOException $e) {
+    echo $e->getMessage();
+  }
+}
