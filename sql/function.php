@@ -53,3 +53,17 @@ function update($id, $name, $age, $password) {
     echo $e->getMessage();
   }
 }
+
+function delete($id) {
+  try {
+    global $conn;
+
+    //query run
+    $sql = $conn->prepare("DELETE FROM users WHERE id=$id");
+    $sql->execute();
+
+    echo "Record deleted successfully.";
+  } catch (PDOException $e) {
+    echo $e->getMessage();
+  }
+}

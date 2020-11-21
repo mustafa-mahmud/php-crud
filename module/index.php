@@ -11,7 +11,9 @@
 				<button class="btn btn-dark">
 					<a href="update.php" target="_blank">Update</a>
 				</button>
-				<button class="btn btn-danger">Delete</button>
+				<button class="btn btn-danger">
+					<a href="delete.php" target="_blank">Delete</a>
+				</button>
 			</div>
 		</div>
 	</div>
